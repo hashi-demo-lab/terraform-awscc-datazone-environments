@@ -9,7 +9,7 @@ permissions: write-all
 
 jobs:
   terraform-docs:
-    name: 'Validte_Module'
+    name: 'Validate_Module'
     runs-on: ubuntu-latest
     environment: production
 
