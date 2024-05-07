@@ -6,7 +6,7 @@ data "tfe_outputs" "domain" {
 
 module "datazone_environment" {
   source = "app.terraform.io/tfc-demo-au/datazone-environments/awscc"
-  version = "~>  0.0.0"
+  version = "~>  0.0.1"
 
   region                        = var.region
   domain_id                     = coalesce(var.domain_id, data.tfe_outputs.domain.values.domain_id)
