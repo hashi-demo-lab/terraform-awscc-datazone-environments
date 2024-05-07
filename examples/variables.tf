@@ -1,4 +1,4 @@
-variable "organization" {
+variable "tfc_organization" {
   description = "The HCP Terraform organization name"
   type        = string
   default     = "tfc-demo-au"
@@ -7,7 +7,7 @@ variable "organization" {
 variable "workspace_name" {
   description = "The workspace to read outputs"
   type        = string
-  default     = "datazone_domain"
+  default     = "datazone_domain4"
 }
 
 variable "region" {
@@ -19,16 +19,20 @@ variable "region" {
 variable "domain_id" {
   description = "The domain to deploy the environment"
   type        = string
+  default = null
 }
 
 variable "project_id" {
   description = "The project to deploy the environment"
   type        = string
+  default = null
+
 }
 
 variable "environment_blueprint_id" {
   description = "The environment blueprint to deploy"
   type        = string
+  default     = null
 }
 
 variable "datazone_environment_profiles" {
