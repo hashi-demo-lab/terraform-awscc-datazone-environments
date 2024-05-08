@@ -43,7 +43,7 @@ variable "datazone_environment_profiles" {
     description                      = optional(string)
     region                           = string
     environment_blueprint_identifier = string
-    project_name                     = string
+    project_identifier                     = string
     user_parameters = optional(list(object({
       name  = string
       value = string

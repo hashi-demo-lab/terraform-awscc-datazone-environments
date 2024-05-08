@@ -5,6 +5,6 @@ datazone_environment_profiles = {
       name                             = "DefaultDataLake_profile"
       region                           = "ap-southeast-2"
       environment_blueprint_identifier = "DefaultDataLake"
-      project_name                     = "shared_env"
+      project_identifier               = "shared_env"
     }
 }

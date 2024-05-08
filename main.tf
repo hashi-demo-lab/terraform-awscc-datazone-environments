@@ -10,7 +10,7 @@ resource "awscc_datazone_environment_profile" "this" {
   environment_blueprint_identifier = each.value.environment_blueprint_identifier
   name                             = each.value.name
   description                      = try(each.value.description)
-  project_identifier               = each.value.project_identifier
+  project_identifier               = coalesce(var.project_map[each.value.project_identifier].project_id, each.value.project_identifier )
   user_parameters                  = try(each.value.user_parameters)
 }
 
@@ -21,5 +21,5 @@ resource "awscc_datazone_environment" "this" {
   domain_identifier              = var.domain_id
   environment_profile_identifier = awscc_datazone_environment_profile.this[each.value.environment_profile_identifier].environment_profile_id
   name                           = each.value.name
-  project_identifier             = each.value.project_identifier
+  project_identifier             = coalesce(var.project_map[each.value.project_identifier].project_id, each.value.project_identifier )
 }
