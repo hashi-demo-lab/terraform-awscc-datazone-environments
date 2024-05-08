@@ -55,7 +55,7 @@ variable "datazone_environment_profiles" {
       name                             = "DefaultDataWarehouse_profile"
       region                           = "ap-southeast-2"
       environment_blueprint_identifier = "DefaultDataWarehouse"
-      project_name                     = "shared_env"
+      project_identifier               = "shared_env"
       user_parameters                  = []
     }
     "DefaultDataLake" = {
@@ -63,7 +63,7 @@ variable "datazone_environment_profiles" {
       name                             = "DefaultDataLake_profile"
       region                           = "ap-southeast-2"
       environment_blueprint_identifier = "DefaultDataLake"
-      project_name                     = "shared_env"
+      project_identifier               = "shared_env"
     }
   }
 }
@@ -73,24 +73,24 @@ variable "datazone_environments" {
   type = map(object({
     name                           = string
     environment_profile_identifier = string
-    project_target                 = string
+    project_identifier                 = string
   }))
 
   default = {
     "Raw" = {
       name                           = "Raw Data Lake"
       environment_profile_identifier = "DefaultDataLake"
-      project_target                 = "data_team"
+      project_identifier             = "data_team"
     }
     "Curated" = {
       name                           = "Curated Data Lake"
       environment_profile_identifier = "DefaultDataLake"
-      project_target                 = "data_team"
+      project_identifier             = "data_team"
     }
     "Product" = {
       name                           = "Product Data Lake"
       environment_profile_identifier = "DefaultDataLake"
-      project_target                 = "data_team"
+      project_identifier             = "data_team"
     }
   }
 }
