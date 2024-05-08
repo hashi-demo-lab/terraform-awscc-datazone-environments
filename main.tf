@@ -1,6 +1,6 @@
 # Due to separation of duties, the following resources below will be moved to a different module
 
-# create environment profiles(s)
+# create environment profiles(s) in project
 resource "awscc_datazone_environment_profile" "this" {
   for_each = var.datazone_environment_profiles
 
@@ -14,6 +14,7 @@ resource "awscc_datazone_environment_profile" "this" {
   user_parameters                  = try(each.value.user_parameters)
 }
 
+# create datazone environment(s) in project
 resource "awscc_datazone_environment" "this" {
   for_each = var.datazone_environments
 

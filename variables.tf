@@ -65,17 +65,17 @@ variable "datazone_environments" {
 
   default = {
     "Raw" = {
-      name                           = "Raw Data Lake"
+      name                           = "RawDataLake"
       environment_profile_identifier = "DefaultDataLake"
       project_target                 = "data_team"
     }
     "Curated" = {
-      name                           = "Curated Data Lake"
+      name                           = "CuratedDataLake"
       environment_profile_identifier = "DefaultDataLake"
       project_target                 = "data_team"
     }
     "Product" = {
-      name                           = "Product Data Lake"
+      name                           = "ProductDataLake"
       environment_profile_identifier = "DefaultDataLake"
       project_target                 = "data_team"
     }
