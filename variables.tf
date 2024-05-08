@@ -12,11 +12,13 @@ variable "domain_id" {
 variable "project_map" {
   description = "map of projects to lookup id by project name"
   type        = any
+  default = null
 }
 
-variable "environment_blueprint_id" {
+variable "blueprint_map {
   description = "The environment blueprint to deploy"
-  type        = string
+  type        = any
+  default     = null
 }
 
 

@@ -14,7 +14,7 @@ terraform {
     organization = "tfc-demo-au"
 
     workspaces {
-      name = "bu1_data_project1_env1"
+      name    = "bu1_data_project1_env1"
       project = "bu1_data_project1"
     }
   }

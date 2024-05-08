@@ -19,19 +19,18 @@ variable "region" {
 variable "domain_id" {
   description = "The domain to deploy the environment"
   type        = string
-  default = null
+  default     = null
 }
 
 variable "project_map" {
   description = "The project to deploy the environment"
   type        = any
-  default = {}
-
+  default     = null
 }
 
-variable "environment_blueprint_id" {
+variable "blueprint_map" {
   description = "The environment blueprint to deploy"
-  type        = string
+  type        = any
   default     = null
 }
 
@@ -43,7 +42,7 @@ variable "datazone_environment_profiles" {
     description                      = optional(string)
     region                           = string
     environment_blueprint_identifier = string
-    project_identifier                     = string
+    project_identifier               = string
     user_parameters = optional(list(object({
       name  = string
       value = string
@@ -73,7 +72,7 @@ variable "datazone_environments" {
   type = map(object({
     name                           = string
     environment_profile_identifier = string
-    project_identifier                 = string
+    project_identifier             = string
   }))
 
   default = {
