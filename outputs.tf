@@ -1,21 +1,24 @@
 output "datazone_environment_profile" {
-  value = { id =  awscc_datazone_environment_profile.this.id
-            domain_id = awscc_datazone_environment_profile.domain_id
-            environment_blueprint_id = awscc_datazone_environment_profile.environment_blueprint_id
-            environment_profile_id = awscc_datazone_environment_profile.environment_profile_id
-  }
+  value = [for k, v in awscc_datazone_environment_profile.this : {
+    id                       = v.id
+    domain_id                = v.domain_id
+    environment_blueprint_id = v.environment_blueprint_id
+    environment_profile_id   = v.environment_profile_id
+    }
+  ]
   description = "datazone environment profile"
 }
 
 output "datazone_environment" {
-value = {
-    id        = awscc_datazone_environment.this.id
-    domain_id  = awscc_datazone_environment.this.domain_id
-    environment_blueprint_id = awscc_datazone_environment.this.environment_blueprint_id
-    environment_id = awscc_datazone_environment.this.environment_id
-    environment_profile_id= awscc_datazone_environment.this.environment_profile_id
-    project_id = awscc_datazone_environment.this.project_id
-    provider_name = awscc_datazone_environment.this.provider_name
-  }
+  value = [for k, v in awscc_datazone_environment.this : {
+    id                       = v.id
+    domain_id                = v.domain_id
+    environment_blueprint_id = v.environment_blueprint_id
+    environment_id           = v.environment_id
+    environment_profile_id   = v.environment_profile_id
+    project_id               = v.project_id
+    provider_name            = v.provider_name
+    }
+  ]
   description = "datazone environment"
 }

@@ -12,7 +12,7 @@ variable "domain_id" {
 variable "project_map" {
   description = "map of projects to lookup id by project name"
   type        = any
-  default = null
+  default     = null
 }
 
 variable "blueprint_map" {
@@ -61,7 +61,7 @@ variable "datazone_environments" {
   type = map(object({
     name                           = string
     environment_profile_identifier = string
-    project_identifier                 = string
+    project_identifier             = string
   }))
 
   default = {
