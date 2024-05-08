@@ -4,10 +4,10 @@ variable "tfc_organization" {
   default     = "tfc-demo-au"
 }
 
-variable "workspace_name" {
+variable "datazone_workspace_name" {
   description = "The workspace to read outputs"
   type        = string
-  default     = "datazone_domain4"
+  default     = null
 }
 
 variable "region" {
@@ -55,7 +55,7 @@ variable "datazone_environment_profiles" {
       name                             = "DefaultDataWarehouse_profile"
       region                           = "ap-southeast-2"
       environment_blueprint_identifier = "DefaultDataWarehouse"
-      project_name                     = "environment"
+      project_name                     = "shared_env"
       user_parameters                  = []
     }
     "DefaultDataLake" = {
@@ -63,7 +63,7 @@ variable "datazone_environment_profiles" {
       name                             = "DefaultDataLake_profile"
       region                           = "ap-southeast-2"
       environment_blueprint_identifier = "DefaultDataLake"
-      project_name                     = "environment"
+      project_name                     = "shared_env"
     }
   }
 }
