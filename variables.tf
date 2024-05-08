@@ -9,14 +9,9 @@ variable "domain_id" {
   type        = string
 }
 
-variable "profile_project_id" {
-  description = "The project to deploy the environment"
-  type        = string
-}
-
-variable "project_id" {
-  description = "The project to deploy the environment"
-  type        = string
+variable "project_map" {
+  description = "map of projects to lookup id by project name"
+  type        = any
 }
 
 variable "environment_blueprint_id" {
@@ -33,7 +28,7 @@ variable "datazone_environment_profiles" {
     description                      = optional(string)
     region                           = string
     environment_blueprint_identifier = string
-    project_name                     = string
+    project_identifier               = string
     user_parameters = optional(list(object({
       name  = string
       value = string
@@ -45,7 +40,7 @@ variable "datazone_environment_profiles" {
       name                             = "DefaultDataWarehouse_profile"
       region                           = "ap-southeast-2"
       environment_blueprint_identifier = "DefaultDataWarehouse"
-      project_name                     = "environment"
+      project_identifier               = "shared_env"
       user_parameters                  = []
     }
     "DefaultDataLake" = {
@@ -53,7 +48,7 @@ variable "datazone_environment_profiles" {
       name                             = "DefaultDataLake_profile"
       region                           = "ap-southeast-2"
       environment_blueprint_identifier = "DefaultDataLake"
-      project_name                     = "environment"
+      project_identifier               = "shared_env"
     }
   }
 }
@@ -65,24 +60,24 @@ variable "datazone_environments" {
   type = map(object({
     name                           = string
     environment_profile_identifier = string
-    project_target                 = string
+    project_identifier                 = string
   }))
 
   default = {
     "Raw" = {
       name                           = "RawDataLake"
       environment_profile_identifier = "DefaultDataLake"
-      project_target                 = "data_team"
+      project_identifier             = "data_team"
     }
     "Curated" = {
       name                           = "CuratedDataLake"
       environment_profile_identifier = "DefaultDataLake"
-      project_target                 = "data_team"
+      project_identifier             = "data_team"
     }
     "Product" = {
       name                           = "ProductDataLake"
       environment_profile_identifier = "DefaultDataLake"
-      project_target                 = "data_team"
+      project_identifier             = "data_team"
     }
   }
 }

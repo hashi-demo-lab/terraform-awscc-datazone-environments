@@ -22,10 +22,10 @@ variable "domain_id" {
   default = null
 }
 
-variable "project_id" {
+variable "project_map" {
   description = "The project to deploy the environment"
-  type        = string
-  default = null
+  type        = any
+  default = {}
 
 }
 
