@@ -10,19 +10,19 @@ datazone_environment_profiles = {
 }
 
 datazone_environments = {
-    "Raw" = {
-      name                           = "RawDataLake"
-      environment_profile_identifier = "DefaultDataLake"
-      project_identifier             = "data_project1"
-    }
-    "Curated" = {
-      name                           = "CuratedDataLake"
-      environment_profile_identifier = "DefaultDataLake"
-      project_identifier             = "data_project2"
-    }
-    "Product" = {
-      name                           = "ProductDataLake"
-      environment_profile_identifier = "DefaultDataLake"
-      project_identifier             = "data_project3"
-    }
+  "Raw" = {
+    name                           = "RawDataLake"
+    environment_profile_identifier = "DefaultDataLake"
+    project_identifier             = "data_project1"
+  }
+  "Curated" = {
+    name                           = "CuratedDataLake"
+    environment_profile_identifier = "DefaultDataLake"
+    project_identifier             = "data_project2"
+  }
+  "Product" = {
+    name                           = "ProductDataLake"
+    environment_profile_identifier = "DefaultDataLake"
+    project_identifier             = "data_project3"
+  }
 }
