@@ -15,7 +15,7 @@ terraform {
 
     workspaces {
       name    = "bu1_data_project1_env1"
-      project = "bu1_data_project1"
+      project = "bu1_data_platform1"
     }
   }
 
