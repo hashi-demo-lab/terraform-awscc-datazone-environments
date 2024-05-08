@@ -9,6 +9,11 @@ variable "domain_id" {
   type        = string
 }
 
+variable "profile_project_id" {
+  description = "The project to deploy the environment"
+  type        = string
+}
+
 variable "project_id" {
   description = "The project to deploy the environment"
   type        = string

@@ -10,11 +10,11 @@ resource "awscc_datazone_environment_profile" "this" {
   environment_blueprint_identifier = var.environment_blueprint_id
   name                             = each.key
   description                      = try(each.value.description)
-  project_identifier               = var.project_id
+  project_identifier               = var.profile_project_id
   user_parameters                  = try(each.value.user_parameters)
 }
 
-# create datazone environment(s) in project
+# create datazone environment(s) in target project
 resource "awscc_datazone_environment" "this" {
   for_each = var.datazone_environments
 
