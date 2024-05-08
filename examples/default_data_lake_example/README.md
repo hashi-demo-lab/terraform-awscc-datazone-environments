@@ -15,7 +15,7 @@
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_datazone_environment"></a> [datazone\_environment](#module\_datazone\_environment) | app.terraform.io/tfc-demo-au/datazone-environments/awscc | ~>  0.0.9 |
+| <a name="module_datazone_environment"></a> [datazone\_environment](#module\_datazone\_environment) | app.terraform.io/tfc-demo-au/datazone-environments/awscc | ~>  0.1.5 |
 
 ## Resources
 
@@ -38,4 +38,7 @@
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_awscc_datazone_environment"></a> [awscc\_datazone\_environment](#output\_awscc\_datazone\_environment) | n/a |
+| <a name="output_environment_profile_identifier"></a> [environment\_profile\_identifier](#output\_environment\_profile\_identifier) | n/a |
