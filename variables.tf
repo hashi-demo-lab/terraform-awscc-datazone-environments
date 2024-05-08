@@ -15,12 +15,11 @@ variable "project_map" {
   default = null
 }
 
-variable "blueprint_map {
+variable "blueprint_map" {
   description = "The environment blueprint to deploy"
   type        = any
   default     = null
 }
-
 
 variable "datazone_environment_profiles" {
   description = "The environment profiles to deploy"
