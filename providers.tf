@@ -1,3 +1,4 @@
-provider "awscc" {
+/* provider "awscc" {
   region = var.region
 }
+ */
